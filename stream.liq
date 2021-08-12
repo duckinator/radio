@@ -9,7 +9,7 @@ playlist = playlist("~/radio/music.pls")
 # Some jingles
 #jingles = playlist("~/radio/jingles.pls")
 # If something goes wrong, we'll play this
-security = single("~/radio/sounds/silence.ogg")
+security = single("~/radio/silence.ogg")
 
 # Start building the feed with music
 radio = playlist
