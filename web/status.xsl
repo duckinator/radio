@@ -27,6 +27,7 @@ a:active, a:focus, a:hover{ color: #2197db; }
 </style>
 </head>
 <body>
+<main>
 	<h1 id="header">Icecast2 Status</h1>
 
 <xsl:for-each select="source">
@@ -104,6 +105,7 @@ a:active, a:focus, a:hover{ color: #2197db; }
 </xsl:choose>
 </xsl:for-each>
 
+</main>
 </body>
 </html>
 </xsl:template>
