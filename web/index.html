@@ -26,16 +26,22 @@ a:active, a:focus, a:hover{ color: #2197db; }
 
 <p>TODO: Actually put effort into this page.</p>
 
-<div class="info"></div>
+    <div id="info"></div>
 
 <audio controls="controls" preload="none">
     <source src="/stream" type="application/ogg"></source>
 </audio>
 
 <script>
+var info = document.getElementById('info');
+
 function _update(data) {
     var source = data['icestats']['source'];
-
+    var artist = source['artist'];
+    var title = source['title'];
+    
+    info.innerHTML = title + ' by ' + artist;
+    
     console.log(source);
     
     setTimeout(update, 2000);
