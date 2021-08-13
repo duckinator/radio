@@ -42,7 +42,7 @@ function _update(data) {
 }
 
 function update() {
-    fetch('http://example.com/movies.json')
+    fetch('/status-json.xsl')
         .then(response => response.json())
         .then(data => _update(data));
 }
