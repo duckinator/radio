@@ -24,11 +24,16 @@ a:active, a:focus, a:hover{ color: #2197db; }
 <main>
 <h1>radio.do1g.com</h1>
 
-    <div id="info"></div>
+<div id="info"></div>
 
-<audio controls="controls" preload="none">
-    <source src="/stream" type="application/ogg"></source>
-</audio>
+<div>
+    <audio id="player" controls="controls" preload="none">
+        <source src="/stream" type="application/ogg"></source>
+    </audio>
+</div>
+
+<p></p>
+<p>Direct stream url: <a href="/stream">https://radio.do1g.com/stream</a></p>
 
 <script>
 var info = document.getElementById('info');
