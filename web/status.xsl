@@ -61,43 +61,8 @@ a:active, a:focus, a:hover{ color: #2197db; }
 		</audio>
 	</xsl:if>
 
-	<xsl:if test="listeners">
-		<p><xsl:value-of select="listeners" /> people listening
-			<xsl:if test="listener_peak">
-				(peak: <xsl:value-of select="listener_peak" />)
-			</xsl:if>
-		</p>
-	</xsl:if>
+	<iframe href="/now-playing.xsl"></iframe>
 
-	<p>Now playing:
-		<xsl:if test="artist">
-			<xsl:value-of select="artist" /> -
-		</xsl:if>
-		<xsl:value-of select="title" />
-	</p>
-
-	<table>
-	<tbody>
-		<xsl:if test="stream_start">
-		<tr>
-			<td>Stream started:</td>
-			<td class="streamstats"><xsl:value-of select="stream_start" /></td>
-		</tr>
-		</xsl:if>
-		<xsl:if test="bitrate">
-			<tr>
-				<td>Bitrate:</td>
-				<td class="streamstats"><xsl:value-of select="bitrate" /></td>
-			</tr>
-		</xsl:if>
-		<xsl:if test="quality">
-			<tr>
-				<td>Quality:</td>
-				<td class="streamstats"><xsl:value-of select="quality" /></td>
-			</tr>
-		</xsl:if>
-	</tbody>
-	</table>
 </xsl:when>
 <xsl:otherwise>
 	<h3><xsl:value-of select="@mount" /> - Not Connected</h3>
