@@ -14,3 +14,7 @@ a basic web radio station setup using icecast2, liquidsoap, and caddy.
 3. Make sure to set passwords and hostname in /etc/icecast2/icecast.xml
 4. `cp secrets.liq.example secrets.liq`, then edit `secrets.liq`
 5. Edit `/etc/caddy/Caddyfile` to just be `import /home/YOUR-USERNAME-HERE/radio/Caddyfile`
+
+## running
+
+`liquidsoap secrets.liq stream.liq`
