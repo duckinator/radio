@@ -26,8 +26,28 @@ a:active, a:focus, a:hover{ color: #2197db; }
 
 <p>TODO: Actually put effort into this page.</p>
 
+<div class="info"></div>
+
 <audio controls="controls" preload="none">
     <source src="/stream" type="application/ogg"></source>
 </audio>
+
+<script>
+function _update(data) {
+    var source = data['icestats']['source'];
+
+    console.log(source);
+    
+    setTimeout(update, 2000);
+}
+
+function update() {
+    fetch('http://example.com/movies.json')
+        .then(response => response.json())
+        .then(data => _update(data));
+}
+
+update();
+</script>
 
 </main>
