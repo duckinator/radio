@@ -12,6 +12,6 @@ apt-get update -y
 apt-get install -y liquidsoap icecast2 caddy
 
 ufw enable
-ufw allow 22,80/tcp
+ufw allow 22,80,443/tcp
 
 systemctl enable icecast2
