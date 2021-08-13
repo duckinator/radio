@@ -22,7 +22,7 @@ radio = fallback(track_sensitive = false, [radio, security])
 output.icecast(%vorbis,
         host = "localhost", port = 8000,
         password = source_password,
-        mount = "stream.ogg",
+        mount = "stream",
         #description = "",
         #genre = "",
         radio)
