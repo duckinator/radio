@@ -1,0 +1,8 @@
+radio.do1g.com
+
+encode zstd gzip
+
+root * /
+reverse_proxy /status-json.xsl 127.0.0.1:8000
+reverse_proxy /stream 127.0.0.1:8000
+file_server
