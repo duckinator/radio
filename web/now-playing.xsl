@@ -13,6 +13,9 @@ body {
 </style>
 </head>
 <body>
+<xsl:for-each select="source">
+<xsl:choose>
+<xsl:when test="listeners">
 	<p>Now playing:
 		<xsl:if test="artist">
 			<xsl:value-of select="artist" /> -
