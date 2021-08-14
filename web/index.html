@@ -16,7 +16,7 @@ a:active, a:focus, a:hover{ color: #2197db; }
 <main>
 <h1>radio.do1g.com</h1>
 
-<p>Now playing: <span id="info"></span></p>
+<p>Now playing: <span id="info"></span> (may be off by 10 seconds)</p>
 
 <div>
     <audio id="player" controls="controls" preload="none">
@@ -45,8 +45,8 @@ function _update(data) {
     var title = source['title'];
     
     info.innerHTML = '<em>' + title + '</em> by <em>' + artist + '</em>';
-    
-    setTimeout(update, 2000);
+
+    setTimeout(update, 10000);
 }
 
 function update() {
