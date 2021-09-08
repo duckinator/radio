@@ -18,6 +18,9 @@ radio = playlist
 # And finally the security
 radio = fallback(track_sensitive = false, [radio, security])
 
+# Make sure everything is stereo
+radio = audio_to_stereo(radio)
+
 # start the stream
 output.icecast(%vorbis,
         host = "localhost", port = 8000,
